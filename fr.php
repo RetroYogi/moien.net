@@ -106,6 +106,7 @@ return [
     'password' => 'Mot de Passe',
     'confirm_password' => 'Confirmer le Mot de Passe',
     'new_password' => 'Nouveau Mot de Passe',
+    'toggle_password_visibility' => 'Afficher le mot de passe',
         
     // Authentication messages
     'logout_success' => 'Vous avez été déconnecté avec succès.',
@@ -147,6 +148,7 @@ return [
     'dont_have_account' => 'Vous n\'avez pas de compte ?',
     'register_now' => 'Inscrivez-vous maintenant',
     'minimum_8_characters' => 'Minimum 8 caractères',
+    'accept_terms_and_privacy' => 'J\'accepte les <a href="/document-viewer.php?doc=cgu" target="_blank">conditions d\'utilisation</a> et la <a href="/document-viewer.php?doc=politique-confidentialite" target="_blank">politique de confidentialité</a>',
     'return_home' => 'Retour à l\'accueil',
     'go_back' => 'Retour',
     
@@ -209,11 +211,10 @@ return [
     "username_generation_failed" => "Impossible de générer un nom d'utilisateur valide. Veuillez contacter le support.",
     'names_contain_invalid_characters' => 'Les noms contiennent des caractères invalides. Veuillez utiliser uniquement des lettres sans accents.',
     'change_username' => 'Changer le nom d\'utilisateur',
-    'username_change_info' => 'Les utilisateurs standard peuvent changer leur nom d\'utilisateur une fois par mois. Les administrateurs n\'ont aucune restriction.',
+    'username_change_info' => 'Vous pouvez modifier votre nom d\'utilisateur une fois par mois.',
     "current_username" => "Nom d'utilisateur actuel",
     "new_username" => "Nouveau nom d'utilisateur",
     'username_help' => 'Seuls les lettres, chiffres, tirets, underscores et points sont autorisés',
-    'next_available' => 'Prochaine disponible',
     'no_changes_to_update' => 'Aucune modification à mettre à jour',
     'invalid_user' => 'Utilisateur invalide',
     'user_updated_successfully' => 'Utilisateur mis à jour avec succès',
@@ -368,6 +369,7 @@ return [
     
     // ===== NOTIFICATIONS & ALERTS =====
     'success' => 'Succès',
+    'action_successful' => 'Opération réussie',
     'error' => 'Erreur',
     'session_expired' => 'Votre session a expiré. Veuillez vous reconnecter.',
     'access_denied_admin' => 'Accès refusé. Privilèges administrateur requis.',
@@ -377,11 +379,6 @@ return [
     'admin_access_indicator' => 'Indicateur de mode d\'accès admin',
     'switching_language' => 'Changement de langue...',
     
-    // ===== EMAIL TEMPLATES =====
-    
-    // Password reset email
-    'email_reset_expire' => 'Ce lien n\'est valide que pendant 24 heures.',
-        
     // ===== JAVASCRIPT MESSAGES =====
     'js_confirm_delete' => 'Êtes-vous sûr de vouloir supprimer cet élément ?',
     'js_network_error' => 'Erreur réseau. Veuillez vérifier votre connexion.',
@@ -428,6 +425,7 @@ return [
     'preferences' => 'Préférences',
     'site_statistics' => 'Statistiques du site',
     'made_with_love_in' => 'Fait avec ❤️ au',
+    'aria_made_with_love_in_lux' => 'Fait avec amour au Luxembourg',
     'help_translate' => 'Aidez-nous à traduire ' . getSiteIdentityText('site_name'),
     'by_key4' => 'Design et développement<br>par Key4 Digital Services',
 
@@ -502,19 +500,18 @@ return [
     'email_send_failed' => 'Échec d\'envoi de l\'e-mail. Veuillez réessayer plus tard.',
     
     // Contact confirmation emails
-    'contact_confirmation_subject' => 'Confirmez votre message - {site_name}',
-    'email_greeting' => 'Bonjour {name},',
+    'contact_confirmation_subject' => 'Confirmez votre message',
     'contact_confirmation_message' => 'Veuillez confirmer que vous souhaitez nous envoyer votre message en cliquant sur le bouton ci-dessous :',
     'confirm_contact_message' => 'Confirmer le message',
     'contact_confirmation_url_fallback' => 'Si le bouton ne fonctionne pas, copiez et collez ce lien dans votre navigateur :',
     'contact_confirmation_footer' => 'Si vous n\'avez pas soumis de formulaire de contact, vous pouvez ignorer cet e-mail.',
     'confirmation_email_sent' => 'E-mail de confirmation envoyé !',
     'contact_confirmation_instructions' => 'Nous avons envoyé un e-mail de confirmation à votre adresse. Veuillez cliquer sur le lien dans l\'e-mail pour envoyer votre message.',
-    'contact_message_sent_successfully' => 'Votre message a été envoyé avec succès ! Nous vous répondrons bientôt.',
+    'contact_message_sent_successfully' => 'Votre message a été envoyé avec succès !',
     'error_sending_message_to_admin' => 'Échec de l\'envoi de votre message à l\'administrateur. Veuillez réessayer plus tard ou contacter le support.',
     
     // Admin notifications
-    'contact_admin_subject' => '{site_name} Contact : {reason}',
+    'contact_admin_subject' => 'Contact : {reason}',
     'new_contact_message' => 'Nouveau message par formulaire de contact',
     'contact_details' => 'Détails du contact',
 
@@ -539,7 +536,7 @@ return [
     'faq_a1_what_is' => '<em>Moien</em> est une page d\'accueil personnelle avec une courte URL personnalisable. Elle vous permet de partager une photo de profil, une biographie et surtout des liens vers des endroits sur le web que vous aimez et vers vos profils de médias sociaux.',
     
     'faq_q2_why_created' => 'Pourquoi <em>Moien</em> a-t-elle été créée ?',
-    'faq_a2_why_created' => 'J\'ai développé <em>Moien</em> pour plusieurs raisons :<ul><li>Pour créer un service en ligne entièrement en luxembourgeois et ainsi promouvoir l\'usage du luxembourgeois sur le web.</li><li>Pour apprendre et me défier en développant l\'accessibilité numérique pour des projets complexes.</li><li>Pour permettre à chacun d\'avoir une mini-page d\'accueil personnelle qui n\'exige pas des visiteurs de créer un compte.</li></ul>',
+    'faq_a2_why_created' => 'J\'ai développé <em>Moien</em> pour plusieurs raisons :<ul><li>Pour créer un service en ligne entièrement en luxembourgeois (parmi d\'autres langues) et ainsi promouvoir l\'usage du luxembourgeois sur le web.</li><li>Pour développer mes connaissances professionnelles, en implémentant l\'accessibilité numérique pour un projet complexe.</li><li>Pour permettre à chacun d\'avoir une mini-page d\'accueil personnelle qui n\'exige pas des visiteurs de créer un compte.</li></ul>',
     
     'faq_q3_is_free' => 'Est-ce que <em>Moien</em> est gratuit ?',
     'faq_a3_is_free' => 'Oui. Les fonctionnalités actuellement gratuites resteront gratuites tant que <em>Moien</em> existera.<br>Des fonctionnalités premium supplémentaires pourraient être ajoutées à l\'avenir.',
@@ -550,10 +547,59 @@ return [
     'faq_q5_translate' => 'Traduirez-vous <em>Moien</em> dans d\'autres langues ?',
     'faq_a5_translate' => 'Je prévois de publier les fichiers de traduction pour que tout le monde puisse participer à la traduction du site web. Pas encore d\'ETA.',
     
+    'faq_q6_userlist' => 'Comment puis-je trouver la page d\'un autre utilisateur ?',
+    'faq_a6_userlist' => 'Il n\'y a actuellement ni annuaire d\'utilisateurs ni base de données consultable. Les pages peuvent être indexées par les moteurs de recherche. Vous pouvez partager n\'importe quelle page en utilisant les fonctionnalités de partage intégrées ou en envoyant l\'URL de la page à vos contacts.',
+    
+    'faq_q7_searchengine' => 'Puis-je empêcher ma page d\'être indexée par les moteurs de recherche ?',
+    'faq_a7_searchengine' => 'Non. Ne partagez que des informations publiques sur votre page - des choses que tout le monde est autorisé à voir ou à lire.',
+    
+    'faq_q8_next_steps' => 'Je me suis inscrit. Que dois-je faire ensuite ?',
+    'faq_a8_next_steps' => '<ol><li>Vous avez rempli votre nom lors de l\'inscription. Ajoutez maintenant un titre et une courte histoire ou biographie.</li><li>Important : Sélectionnez la langue dans laquelle vous écrivez vos informations de profil. Il s\'agit du paramètre <strong>Langue de la page de profil utilisateur</strong>.</li><li>Enfin, ajoutez vos liens.</li></ol>N\'oubliez pas de cliquer sur le bouton sauvegarder après chaque étape <span aria-hidden="true">👌</span>',
+    
+    'faq_q9_homepage_address' => 'Quelle est l\'adresse de ma page d\'accueil ?',
+    'faq_a9_homepage_address' => 'Connectez-vous à moien.net et cliquez sur Voir le profil dans la navigation principale. Cela vous mène directement à votre page d\'accueil. Vous verrez l\'adresse de votre page dans la barre d\'URL. Vous pouvez la copier ou utiliser les fonctionnalités de partage situées sous votre profil.',
+    
     // FAQ Call to Action
     'still_have_questions' => 'Vous avez encore des questions ?',
     'faq_contact_message' => 'Vous ne trouvez pas la réponse que vous cherchez ? Contactez-nous.',
     'contact_us' => 'Nous contacter',
+    
+    // ===== EMAIL TEMPLATES =====
+    
+    // use generic messages to allow reuse
+    'link_expires_in_24h' => 'Ce lien est valide pendant 24 heures.',
+    'email_footer_text' => 'Message généré par le système de messagerie',
+    'email_sent_from' => 'envoyé depuis',
+    'email_greeting' => 'Bonjour {{name}}',
+    'email_footer_automated_message' => 'Ceci est un message automatique de',
+    'email_footer_all_rights_reserved' => 'Tous droits réservés.',
+
+    // ===== EMAIL REUSABLE ELEMENTS =====
+    // Greetings & Closings
+    'email_greeting_hello_name' => 'Bonjour {{name}}',
+    'email_greeting_welcome_name' => 'Bienvenue, {{name}} !',
+
+    // Common Instructions
+    'email_button_not_working_instruction' => 'Si le bouton ci-dessus ne fonctionne pas, vous pouvez également copier et coller ce lien dans votre navigateur :',
+    'email_link_expires_security' => 'Ce lien expirera pour des raisons de sécurité.',
+
+    // Security Notices
+    'email_security_notice_title' => 'Avis de sécurité :',
+    'email_ignore_if_not_requested' => 'Si vous n\'avez pas demandé cela, vous pouvez ignorer cet e-mail en toute sécurité.',
+
+    // Layout Elements
+    'email_automated_message_from' => 'Ceci est un message automatique de {{site:site_name}}',
+    'email_copyright_year' => '© {{current_year}} {{site:site_name}}',
+    'email_all_rights_reserved' => 'Tous droits réservés',
+
+    // Action Buttons
+    'email_button_confirm_account' => 'Confirmer mon compte',
+    'email_button_reset_password' => 'Réinitialiser mon mot de passe',
+    'email_button_confirm_email' => 'Confirmer l\'email',
+
+    // Time-related
+    'email_expires_in_24_hours' => 'Ce lien expirera dans 24 heures pour des raisons de sécurité.',
+    'email_expires_in_1_hour' => 'Ce lien expirera dans 1 heure pour votre sécurité.',
     
     // ===== MISCELLANEOUS =====
     'luxembourg' => 'Luxembourg',

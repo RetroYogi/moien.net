@@ -24,6 +24,8 @@ return [
     'skip_to_content' => 'Direkt zum Haaptinhalt sprangen',
     'skip_to_main_navigation' => 'Zur Haaptnavigatioun sprangen',
     'main_navigation' => 'Haaptnavigatioun',
+    'navigation' => 'Navigatioun',
+    'show_hide_navigation' => 'Navigatioun weisen oder verstoppen',
     'toggle_theme_description' => 'Tëschent hell, däischter a System-Design wiesselen',
     'toggle_menu' => 'Navigatiounsmenü op/zoumaachen',
     'menu_opened' => 'Navigatiounsmenü opgemaach',
@@ -106,6 +108,7 @@ return [
     'password' => 'Passwuert',
     'confirm_password' => 'Passwuert bestätegen',
     'new_password' => 'Neit Passwuert',
+    'toggle_password_visibility' => 'Passwuert uweisen',
     
     // ===== Authentication messages =====
     'logout_success' => 'Dir hutt Iech erfollegräich ofgemellt.',
@@ -146,6 +149,7 @@ return [
     'dont_have_account' => 'Hutt Dir nach kee Kont?',
     'register_now' => 'Elo registréieren',
     'minimum_8_characters' => 'Op d’mannst 8 Zeechen',
+    'accept_terms_and_privacy' => 'Ech akzeptéieren d\'<a href="/document-viewer.php?doc=cgu" target="_blank">Notzungsbedéngungen</a> an d\'<a href="/document-viewer.php?doc=politique-confidentialite" target="_blank">Dateschutzrichtlinn</a>',
     'return_home' => 'Zréck op d\'Startsäit',
     'go_back' => 'Zréck',
 
@@ -208,11 +212,10 @@ return [
     'username_generation_failed' => 'Et konnt kee gëltege Benotzernumm generéiert ginn. Kontaktéiert w.e.g. de Support.',
     'names_contain_invalid_characters' => 'Nimm enthalen ongëlteg Zeechen. Benotzt w.e.g. just Buschtawen ouni Akzenter.',
     'change_username' => 'Benotzernumm änneren',
-    'username_change_info' => 'Standard-Benotzer kënnen hire Benotzernumm eemol pro Mount änneren. Admin-Benotzer hu keng Aschränkungen.',
+    'username_change_info' => 'Dir kënnt äre Benotzernumm eemol pro Mount änneren.',
     'current_username' => 'Aktuelle Benotzernumm',
     'new_username' => 'Neie Benotzernumm',
     'username_help' => 'Nëmme Buschtawen, Zuelen, Bindestrécher, Ënnersträicher a Punkten erlaabt',
-    'next_available' => 'Nächst méiglech Ännerung',
     'no_changes_to_update' => 'Keng Ännerunge fir z’aktualiséieren',
     'invalid_user' => 'Ongëltege Benotzer',
     'user_updated_successfully' => 'Benotzer erfollegräich aktualiséiert',
@@ -366,6 +369,7 @@ return [
         
     // ===== NOTIFICATIONS & ALERTS =====
     'success' => 'Erfolleg',
+    'action_successful' => 'Aktioun war erfollegräich',
     'error' => 'Feeler',
     'session_expired' => 'Är Sessioun ass ofgelaf. Loggt Iech w.e.g. nach eng Kéier an.',
     'access_denied_admin' => 'Zougang verweigert. Du brauchs Admin-Rechter, klenge Fatzert!.',
@@ -375,12 +379,7 @@ return [
     'admin_access_indicator' => 'Indikator fir Admin-Zougangsmodus',
     'switching_language' => 'Sprooch wiesselt...',
         
-    // ===== EMAIL TEMPLATES =====
-    // Welcome email
-        
-    // Password reset email
-    'email_reset_expire' => 'Dëse Link ass just 24 Stonne gëlteg.',
-            
+
     // ===== JAVASCRIPT MESSAGES =====
     'js_confirm_delete' => 'Sidd Dir sécher, datt Dir dëst Element läsche wëllt?',
     'js_network_error' => 'Netzwierksfeeler. Kontrolléiert w.e.g. Är Verbindung.',
@@ -427,6 +426,7 @@ return [
     'preferences' => 'Astellungen',
     'site_statistics' => 'Statistike vun der Säit',
     'made_with_love_in' => 'Mat ❤️ gemaach zu',
+    'aria_made_with_love_in_lux' => 'Mat Léift gemaach zu Lëtzebuerg',
     'help_translate' => 'Hëlleft eis ' . getSiteIdentityText('site_name') . ' iwwersetzen',
     'by_key4' => 'Design an Entwécklung:<br>Key4 Digital Services',
         
@@ -477,7 +477,7 @@ return [
     'image_processing_failed' => 'Bildveraarbechtung feelgeschloen',
     'no_photo_to_remove' => 'Keng Foto fir ze läschen',
     'photo_removal_failed' => 'Foto konnt net geläscht ginn',
-    'profile_photo_alt' => 'Profilfoto vun: {name}',
+    'profile_photo_alt' => 'Profilfoto vum {name}',
         
     // ===== CONTACT FORM =====
     'contact_form_description' => 'Kontaktéiert eis mam Formulaire hei drënner. Mir äntweren esou séier wéi méiglech.',
@@ -499,19 +499,18 @@ return [
     'email_send_failed' => 'E-Mail konnt net geschéckt ginn. Probéiert w.e.g. méi spéit nach eng Kéier.',
         
     // Contact confirmation emails
-    'contact_confirmation_subject' => 'Bestätegt Äre Message - {site_name}',
-    'email_greeting' => 'Moien, {name},',
+    'contact_confirmation_subject' => 'Bestätegt Äre Message',
     'contact_confirmation_message' => 'Bestätegt w.e.g., datt Dir dëse Message un eis schécke wëllt andeems Dir op de Knäppchen hei drënner klickt:',
     'confirm_contact_message' => 'Message bestätegen',
     'contact_confirmation_url_fallback' => 'Wann de Knäppchen net funktionéiert, kopéiert dëse Link an Äre Browser:',
-    'contact_confirmation_footer' => 'Wann Dir kee Kontaktformular ofgeschéckt hutt, kënnt Dir dës E-Mail einfach ignoréieren.',
+    'contact_confirmation_footer' => 'Wann Dir kee Kontaktformular fortgeschéckt hutt, kënnt Dir dës E-Mail einfach ignoréieren.',
     'confirmation_email_sent' => 'Bestätegungs-E-Mail geschéckt!',
     'contact_confirmation_instructions' => 'Mir hunn eng Bestätegungs-E-Mail un Är Adress geschéckt. Klickt w.e.g. op de Link an där E-Mail fir de Message ofzeschécken.',
-    'contact_message_sent_successfully' => 'Äre Message gouf erfollegräich geschéckt! Mir mellen eis geschwënn bei Iech.',
+    'contact_message_sent_successfully' => 'Äre Message gouf erfollegräich geschéckt!',
     'error_sending_message_to_admin' => 'Feeler beim Schécke vum Message un den Administrateur. Probéiert w.e.g. méi spéit nach eng Kéier oder kontaktéiert de Support.',
         
     // Admin notifications
-    'contact_admin_subject' => '{site_name} Kontakt: {reason}',
+    'contact_admin_subject' => 'Kontakt: {reason}',
     'new_contact_message' => 'Nei Noriicht vum Kontaktformular',
     'contact_details' => 'Kontaktdetailer',
 
@@ -533,24 +532,73 @@ return [
     
     // FAQ Questions and Answers
     'faq_q1_what_is' => 'Wat ass <em>Moien</em>?',
-    'faq_a1_what_is' => '<em>Moien</em> ass eng perséinlech Homepage mat enger flotter personaliséierbarer URL. Et erlaabt Iech e Profilbild, eng Biografie ze deelen an besonnesch Linken op Plazen um Web déi Dir léif hutt an op Är sozial Media Profiler.',
+    'faq_a1_what_is' => '<em>Moien</em> ass eng perséinlech Mini-Websäit mat enger flotter, personaliséierbarer URL. Dir kënnt e Profilbild, eng kuerz Biografie an Är wichtegst Linken (z. B. op Websäiten oder sozial Netzwierker) deelen.',
     
     'faq_q2_why_created' => 'Firwat gouf <em>Moien</em> erstallt?',
-    'faq_a2_why_created' => 'Ech hunn <em>Moien</em> aus e puer Grënn entwéckelt:<ul><li>Fir en Online Service komplett op Lëtzebuergesch ze kreéieren an doduerch d\'Benotzung vun der Lëtzebuerger Sprooch um Web ze förderen.</li><li>Fir ze léieren a mech selwer ze challengéieren, andeems ech digital Accessibilitéit fir komplex Projeten bauen.</li><li>Fir jiddwerengem z\'erméiglechen eng perséinlech Mini-Homepage ze hunn déi net verlaangt datt d\'Visiteuren e Kont kreéieren.</li></ul>',
+    'faq_a2_why_created' => 'Ech hunn <em>Moien</em> aus e puer Grënn entwéckelt:<ul><li>Fir en Online Service unzebidden dee komplett op Lëtzebuergesch ass (an op anere Sproochen) an doduerch d\'Benotzung vun der Lëtzebuerger Sprooch um Web ze förderen.</li><li>Fir mech berufflech weiderzeilden, andeems ech déi digital Accessibilitéit fir e komple Projete ëmsetzen.</li><li>Fir jiddwerengem z\'erméiglechen eng perséinlech Mini-Homepage ze hunn fir déi d\'Visiteuren kee Benotzerkont brauchen.</li></ul>',
     
     'faq_q3_is_free' => 'Ass <em>Moien</em> gratis?',
-    'faq_a3_is_free' => 'Jo. Aktuell gratis Funktiounen bleiwen gratis sou laang wéi <em>Moien</em> existéiert.<br>Et kéinten zousätzlech Premium Funktiounen an der Zukunft dobäikomm.',
+    'faq_a3_is_free' => 'Jo. Déi aktuell gratis Funktioune bleiwen gratis, sou laang wéi Moien existéiert. An Zukunft kéinten zousätzlech Premium-Funktioune dobäikommen.',
     
     'faq_q4_add_features' => 'Wäert Dir Feature XYZ dobäisetzen?',
     'faq_a4_add_features' => 'Vläicht. Benotzt w.e.g. de Kontaktformular fir Features ze froen.',
     
     'faq_q5_translate' => 'Wäert Dir <em>Moien</em> an aner Sproochen iwwersetzen?',
-    'faq_a5_translate' => 'Ech plangen d\'Iwwersetzungsfichieren ze publizéieren sou datt jiddwereen kann matmaachen d\'Websäit ze iwwersetzen. Nach keng ETA.',
+    'faq_a5_translate' => 'Ech plangen d\'Iwwersetzungsfichieren ze publizéieren sou datt jiddweree ka matmaachen an d\'Websäit iwwersetzen. Nach keng ETA.',
+    
+    'faq_q6_userlist' => 'Wéi kann ech d\'Säit vun engem anere Benotzer fannen?',
+    'faq_a6_userlist' => 'Et gëtt aktuell keng Benotzer-Lëscht oder sichbar Datebank. Säite kënne vu Sichmaschinnen indexéiert ginn. Dir kennt all Säit iwwer d\'integréiert Sharing-Funktiounen deelen, oder andeems Dir d\'URL vun der Säit un är Kontakter schéckt.',
+    
+    'faq_q7_searchengine' => 'Kann ech verhënneren datt meng Säit vu Sichmaschinnen indexéiert gëtt?',
+    'faq_a7_searchengine' => 'Neen. Deelt nëmmen ëffentlech Informatiounen op ärer Säit - Saachen déi jiddereen däerf gesinn oder ze liesen.',
+    
+    'faq_q8_next_steps' => 'Ech hu mech registréiert. Wat kënnt als nächst?',
+    'faq_a8_next_steps' => '<ol><li>Dir hutt ären Numm bei der Registratioun ausgefüllt. Füügt elo een Titel an eng kuerz Geschicht oder Biographie bäi.</li><li>Wichteg: Wielt d\'Sprooch aus an där Dir är Profilinformatiounen schreift. Dat ass d\'<strong>Benotzerprofilsäiten-Sprooch</strong> Astellung.</li><li>Füügt schlussendlech är Linken bäi.</li></ol>Vergiess net op de Späichere-Knäppchen no all Schrëtt ze klicken <span aria-hidden="true">👌</span>',
+    
+    'faq_q9_homepage_address' => 'Wat ass d\'Adress vun menger Homepage?',
+    'faq_a9_homepage_address' => 'Loggt iech op moien.net an a klickt op Profil weisen an der Haaptnavigatioun. Dat féiert iech direkt op är Homepage. Dir gesitt d\'Adress vun ärer Säit an der URL-Bar. Dir kennt se kopéieren oder d\'Sharing-Funktiounen ënner ärem Profil benotzen.',
     
     // FAQ Call to Action
     'still_have_questions' => 'Hutt Dir nach Froen?',
     'faq_contact_message' => 'Fannt Dir d\'Äntwert net déi Dir sicht? Kontaktéiert eis.',
     'contact_us' => 'Kontaktéiert eis',
+    
+    // ===== EMAIL TEMPLATES =====
+        
+    // use generic messages to allow reuse
+    'link_expires_in_24h' => 'Dëse Link ass 24 Stonne gëlteg.',
+    'email_footer_text' => 'Dëse Message gouf vum E-Mail System generéiert',
+    'email_sent_from' => 'geschéckt vun',
+    'email_greeting' => 'Moien, {{name}}',
+    'email_footer_automated_message' => 'Dëst ass eng automatesch Message vun',
+    'email_footer_all_rights_reserved' => 'All Rechter reservéiert.',
+
+    // ===== EMAIL REUSABLE ELEMENTS =====
+    // Greetings & Closings
+    'email_greeting_hello_name' => 'Moien {{name}}',
+    'email_greeting_welcome_name' => 'Wëllkomm, {{name}}!',
+
+    // Common Instructions
+    'email_button_not_working_instruction' => 'Falls de Knäppchen uewen net fonctionnéiert, kënnt dir dëse Link och an äre Browser kopéieren:',
+    'email_link_expires_security' => 'Dëse Link leeft aus Sécherheetsgrënn of.',
+
+    // Security Notices
+    'email_security_notice_title' => 'Sécherheetshinweis:',
+    'email_ignore_if_not_requested' => 'Falls dir dëst net ugefrot hutt, kënnt dir dës E-Mail sécher ignoréieren.',
+
+    // Layout Elements
+    'email_automated_message_from' => 'Dëst ass eng automatesch Message vun {{site:site_name}}',
+    'email_copyright_year' => '© {{current_year}} {{site:site_name}}',
+    'email_all_rights_reserved' => 'All Rechter reservéiert',
+
+    // Action Buttons
+    'email_button_confirm_account' => 'Mäi Kont confirméieren',
+    'email_button_reset_password' => 'Mäi Passwuert zerécksetzen',
+    'email_button_confirm_email' => 'E-Mail confirméieren',
+
+    // Time-related
+    'email_expires_in_24_hours' => 'Dëse Link leeft a 24 Stonnen aus Sécherheetsgrënn of.',
+    'email_expires_in_1_hour' => 'Dëse Link leeft zu ärer Sécherheet an 1 Stonn of.',
     
     // ===== MISCELLANEOUS =====
     'luxembourg' => 'Lëtzebuerg',
